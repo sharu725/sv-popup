@@ -1,7 +1,6 @@
 <script>
   import { setContext } from "svelte";
-  import { nanoid } from "nanoid";
-  setContext("modalId", nanoid());
+  setContext("modalId", Symbol());
 </script>
 
 <div>
