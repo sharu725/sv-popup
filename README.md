@@ -10,7 +10,7 @@ A simple popup/modal for svelte/sveltekit apps.
 
 ```svelte
 <script>
-  import {Modal, Content, Trigger} from "sv-popup"
+  import { Modal, Content, Trigger } from "sv-popup"
 </script>
 
 <Modal>
