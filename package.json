@@ -1,6 +1,6 @@
 {
   "name": "sv-popup",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
@@ -11,7 +11,8 @@
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.47.0"
+    "svelte": "^3.47.0",
+    "svelte2tsx": "^0.5.8"
   },
   "type": "module",
   "svelte": "index.js",

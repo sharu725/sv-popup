@@ -5,16 +5,18 @@
 </script>
 
 <div>
-  <div class="modal" class:hidden={modalId !== $id}>
-    <div class="content">
-      <div class="close-button" on:click={() => ($id = false)}>&times;</div>
-      <slot />
+  <div class="modal__container" class:hidden={modalId !== $id}>
+    <div class="modal__content">
+      <div class="close__button" on:click={() => ($id = false)}>&times;</div>
+      {#if $id}
+        <slot />
+      {/if}
     </div>
   </div>
 </div>
 
 <style>
-  .modal {
+  .modal__container {
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -25,7 +27,7 @@
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
   }
-  .content {
+  .modal__content {
     position: relative;
     background-color: #fefefe;
     margin: 15% auto;
@@ -33,7 +35,7 @@
     border: 1px solid #888;
     width: 80%;
   }
-  .close-button {
+  .close__button {
     position: absolute;
     top: 0;
     right: 0.5rem;
@@ -42,13 +44,16 @@
     font-weight: bold;
     cursor: pointer;
   }
-  .close-button:hover,
-  .close-button:focus {
+  .close__button:hover,
+  .close__button:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
   .hidden {
     display: none;
+  }
+  :global(.modal__content *) {
+    max-width: 100%;
   }
 </style>
