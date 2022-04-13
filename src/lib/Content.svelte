@@ -2,6 +2,21 @@
   import { id } from "./store.js";
   import { getContext } from "svelte";
   const modalId = getContext("modalId");
+
+  const keyPressed = (event) => {
+    if (event.key === "Escape") {
+      $id = false;
+    }
+  };
+
+  const clicked = (event) => {
+    if (
+      event.target.classList.contains("modal") &&
+      !event.target.classList.contains("close-button")
+    ) {
+      $id = false;
+    }
+  };
 </script>
 
 <div>
@@ -12,6 +27,8 @@
     </div>
   </div>
 </div>
+
+<svelte:window on:keydown={keyPressed} on:click={clicked} />
 
 <style>
   .modal {
