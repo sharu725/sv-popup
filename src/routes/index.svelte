@@ -12,6 +12,11 @@ An easy to use popup/modal utility for svelte.
   <li>easy to use components</li>
   <li>click outside or escape to close modal</li>
   <li>uses portal</li>
+  <li>
+    <a target="_blank" href="https://bundlephobia.com/package/sv-popup@0.1.0"
+      >less than 1KB (minified+gzipped)</a
+    >
+  </li>
 </ul>
 
 <Modal>
