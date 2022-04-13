@@ -1,6 +1,6 @@
 {
   "name": "sv-popup",
-  "version": "0.0.18",
+  "version": "0.0.20",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",

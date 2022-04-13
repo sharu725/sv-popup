@@ -1,6 +1,8 @@
 <script>
+  import Portal from "./Portal.svelte";
   import { id } from "./store.js";
   import { getContext } from "svelte";
+
   const modalId = getContext("modalId");
 
   const keyPressed = (event) => {
@@ -11,15 +13,15 @@
 
   const clicked = (event) => {
     if (
-      event.target.classList.contains("modal") &&
-      !event.target.classList.contains("close-button")
+      event.target.classList.contains("modal__container") &&
+      !event.target.classList.contains("close__button")
     ) {
       $id = false;
     }
   };
 </script>
 
-<div>
+<Portal>
   <div class="modal__container" class:hidden={modalId !== $id}>
     <div class="modal__content">
       <div class="close__button" on:click={() => ($id = false)}>&times;</div>
@@ -28,7 +30,7 @@
       {/if}
     </div>
   </div>
-</div>
+</Portal>
 
 <svelte:window on:keydown={keyPressed} on:click={clicked} />
 
