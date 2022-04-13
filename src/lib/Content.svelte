@@ -49,9 +49,10 @@
   .modal__content {
     position: relative;
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 100px auto;
     padding: 20px;
     border: 1px solid #888;
+    max-width: 800px;
     width: 80%;
   }
   .close__button {

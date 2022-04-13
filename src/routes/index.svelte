@@ -5,6 +5,14 @@
 </script>
 
 <h1>sv-popup</h1>
+An easy to use popup/modal utility for svelte.
+
+<h2>Features</h2>
+<ul>
+  <li>easy to use components</li>
+  <li>click outside or escape to close modal</li>
+  <li>uses portal</li>
+</ul>
 
 <Modal>
   <Content>
@@ -14,7 +22,7 @@
     <button>Open Modal</button>
   </Trigger>
 </Modal>
-<br>
+<br />
 <Modal>
   <Content>
     <h2>Hello 2</h2>
@@ -23,12 +31,10 @@
     <button>Open Modal 2</button>
   </Trigger>
 </Modal>
-<br>
+<br />
 <Modal>
   <Content>
     <iframe
-      width="1524"
-      height="720"
       src="https://www.youtube.com/embed/7xDcmL5-ET8"
       title="YouTube video player"
       frameborder="0"
@@ -45,5 +51,10 @@
   h1 {
     text-decoration: underline;
     text-decoration-style: dashed;
+  }
+  iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
   }
 </style>
