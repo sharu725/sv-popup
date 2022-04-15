@@ -24,16 +24,25 @@ An easy to use popup/modal utility for svelte.
     <h2>Hello</h2>
   </Content>
   <Trigger>
-    <button>Open Modal</button>
+    <button>Open modal default</button>
   </Trigger>
 </Modal>
 <br />
-<Modal>
+<Modal small={true}>
   <Content>
-    <h2>Hello 2</h2>
+    <h2>Hello world</h2>
   </Content>
   <Trigger>
-    <button>Open Modal 2</button>
+    <button>Open modal small</button>
+  </Trigger>
+</Modal>
+<br />
+<Modal big={true}>
+  <Content>
+    <h2>Hello world</h2>
+  </Content>
+  <Trigger>
+    <button>Open modal big</button>
   </Trigger>
 </Modal>
 <br />
@@ -48,7 +57,37 @@ An easy to use popup/modal utility for svelte.
     />
   </Content>
   <Trigger>
-    <button>Open video</button>
+    <button>Open video default</button>
+  </Trigger>
+</Modal>
+<br />
+<Modal wrapper={false} big={true}>
+  <Content>
+    <iframe
+      src="https://www.youtube.com/embed/7xDcmL5-ET8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
+  </Content>
+  <Trigger>
+    <button>Open video no wrapper + big layout</button>
+  </Trigger>
+</Modal>
+<br />
+<Modal wrapper={false} big={true} button={false}>
+  <Content>
+    <iframe
+      src="https://www.youtube.com/embed/7xDcmL5-ET8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
+  </Content>
+  <Trigger>
+    <button>Open video no wrapper + big layout + no close button</button>
   </Trigger>
 </Modal>
 

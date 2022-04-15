@@ -4,6 +4,10 @@
   import { getContext } from "svelte";
 
   const modalId = getContext("modalId");
+  const wrapper = getContext("wrapper");
+  const small = getContext("small");
+  const big = getContext("big");
+  const button = getContext("button");
 
   const keyPressed = (event) => {
     if (event.key === "Escape") {
@@ -23,9 +27,22 @@
 
 <Portal>
   <div class="modal__container" class:hidden={modalId !== $id}>
-    <div class="modal__content">
-      <div class="close__button" on:click={() => ($id = false)}>&times;</div>
-      {#if $id}
+    <div
+      class="modal__content"
+      class:modal__big={big}
+      class:modal__small={small}
+      class:modal__nobg={!wrapper}
+    >
+      {#if button}
+        <div
+          class="close__button"
+          class:close__nobg={!wrapper}
+          on:click={() => ($id = false)}
+        >
+          &times;
+        </div>
+      {/if}
+      {#if modalId == $id}
         <slot />
       {/if}
     </div>
@@ -48,28 +65,51 @@
   }
   .modal__content {
     position: relative;
-    background-color: #fefefe;
     margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #888;
     max-width: 800px;
     width: 80%;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+  }
+  .modal__big {
+    max-width: 100%;
+    padding: 0;
+    margin: 3% auto;
+  }
+  .modal__small {
+    max-width: 400px;
+    padding: 0;
+  }
+  .modal__nobg {
+    background-color: transparent;
+    border: none;
+    padding: 0;
   }
   .close__button {
     position: absolute;
-    top: 0;
-    right: 0.5rem;
-    color: #aaa;
-    font-size: 28px;
+    top: -0.75rem;
+    right: -0.75rem;
+    color: #ddd;
+    font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+    background: rgb(233, 77, 77);
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
   }
   .close__button:hover,
   .close__button:focus {
-    color: black;
     text-decoration: none;
-    cursor: pointer;
+    color: #ccc;
+    background: rgb(211, 60, 60);
   }
+
   .hidden {
     display: none;
   }
