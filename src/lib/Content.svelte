@@ -39,7 +39,32 @@
           class:close__nobg={!wrapper}
           on:click={() => ($id = false)}
         >
-          &times;
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            aria-hidden="true"
+            role="img"
+            class="iconify iconify--icon-park"
+            width="32"
+            height="32"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 48 48"
+            ><g fill="none" stroke-linejoin="round" stroke-width="4"
+              ><path
+                fill="currentColor"
+                stroke="currentColor"
+                d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+              /><path
+                stroke="#fff"
+                stroke-linecap="round"
+                d="M29.6569 18.3431L18.3432 29.6568"
+              /><path
+                stroke="#fff"
+                stroke-linecap="round"
+                d="M18.3432 18.3431L29.6569 29.6568"
+              /></g
+            ></svg
+          >
         </div>
       {/if}
       {#if modalId == $id}
@@ -92,22 +117,15 @@
     position: absolute;
     top: -0.75rem;
     right: -0.75rem;
-    color: #ddd;
-    font-size: 1.5rem;
-    font-weight: bold;
+    color: rgb(233, 71, 71);
     cursor: pointer;
-    background: rgb(233, 77, 77);
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
+    transition-duration: 200ms;
   }
+
   .close__button:hover,
   .close__button:focus {
-    text-decoration: none;
-    color: #ccc;
-    background: rgb(211, 60, 60);
+    transform: scale(1.1);
+    color: rgb(214, 69, 69);
   }
 
   .hidden {
