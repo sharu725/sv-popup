@@ -28,6 +28,7 @@ An easy to use popup/modal utility for svelte.
   </Trigger>
 </Modal>
 <br />
+<br />
 <Modal small={true}>
   <Content>
     <h2>Hello world</h2>
@@ -37,6 +38,7 @@ An easy to use popup/modal utility for svelte.
   </Trigger>
 </Modal>
 <br />
+<br />
 <Modal big={true}>
   <Content>
     <h2>Hello world</h2>
@@ -45,6 +47,7 @@ An easy to use popup/modal utility for svelte.
     <button>Open modal big</button>
   </Trigger>
 </Modal>
+<br />
 <br />
 <Modal>
   <Content>
@@ -61,6 +64,7 @@ An easy to use popup/modal utility for svelte.
   </Trigger>
 </Modal>
 <br />
+<br />
 <Modal wrapper={false} big={true}>
   <Content>
     <iframe
@@ -76,6 +80,7 @@ An easy to use popup/modal utility for svelte.
   </Trigger>
 </Modal>
 <br />
+<br />
 <Modal wrapper={false} big={true} button={false}>
   <Content>
     <iframe
@@ -90,7 +95,22 @@ An easy to use popup/modal utility for svelte.
     <button>Open video no wrapper + big layout + no close button</button>
   </Trigger>
 </Modal>
-
+<br />
+<br />
+<p>
+	An image as a trigger and content
+</p>
+<Modal wrapper={false} big={true} button={false}>
+  <Content>
+    <img src="https://picsum.photos/id/237/1000/600" alt="a dog">
+  </Content>
+  <Trigger>
+    <img src="https://picsum.photos/id/237/300/200" alt="a dog">
+  </Trigger>
+</Modal>
+<br>
+<br>
+<a href="https://github.com/sharu725/sv-popup">Open an issue</a>
 <style>
   h1 {
     text-decoration: underline;
@@ -100,5 +120,8 @@ An easy to use popup/modal utility for svelte.
     width: 100%;
     aspect-ratio: 16/9;
     height: auto;
+  }
+  br {
+    display: block;
   }
 </style>
