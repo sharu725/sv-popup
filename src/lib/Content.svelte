@@ -4,7 +4,6 @@
   import { getContext } from "svelte";
 
   const modalId = getContext("modalId");
-  const wrapper = getContext("wrapper");
   const small = getContext("small");
   const big = getContext("big");
   const button = getContext("button");
@@ -44,16 +43,11 @@
       class={`modal__content ${className ? className : ""}`}
       class:modal__big={big}
       class:modal__small={small}
-      class:modal__nobg={!wrapper}
       {...$$restProps}
       style:background-color={basic ? "white" : null}
     >
       {#if button}
-        <div
-          class="close__button"
-          class:close__nobg={!wrapper}
-          on:click={() => ($id = false)}
-        >
+        <div class="close__button" on:click={() => ($id = false)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -120,11 +114,7 @@
     max-width: 400px;
     padding: 0;
   }
-  .modal__nobg {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-  }
+
   .close__button {
     position: absolute;
     top: -0.75rem;
