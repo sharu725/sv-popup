@@ -8,6 +8,15 @@
   const small = getContext("small");
   const big = getContext("big");
   const button = getContext("button");
+  const basic = getContext("basic");
+
+  let rest = getContext("rest");
+
+  const modalClass = rest.class;
+  delete rest.class;
+
+  let className = "";
+  export { className as class };
 
   const keyPressed = (event) => {
     if (event.key === "Escape") {
@@ -26,12 +35,18 @@
 </script>
 
 <Portal>
-  <div class="modal__container" class:hidden={modalId !== $id}>
+  <div
+    class={`modal__container ${modalClass ? modalClass : ""}`}
+    class:hidden={modalId !== $id}
+    {...rest}
+  >
     <div
-      class="modal__content"
+      class={`modal__content ${className ? className : ""}`}
       class:modal__big={big}
       class:modal__small={small}
       class:modal__nobg={!wrapper}
+      {...$$restProps}
+      style:background-color={basic ? "white" : null}
     >
       {#if button}
         <div
@@ -93,9 +108,6 @@
     margin: 100px auto;
     max-width: 800px;
     width: 80%;
-    background-color: #fefefe;
-    border: 1px solid #888;
-    padding: 20px;
     display: grid;
     place-items: center;
   }
