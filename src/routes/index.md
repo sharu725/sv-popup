@@ -13,7 +13,7 @@
 - click outside or escape to close modal
 - uses portal
 - pass classes and attributes to Modal, Content, & Trigger
-- [less than 1KB (minified+gzipped)](https://bundlephobia.com/package/sv-popup@0.1.0)
+- [less than 1KB (minified+gzipped)](https://bundlephobia.com/package/sv-popup)
 
 ## Demo
 
