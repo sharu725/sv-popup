@@ -15,11 +15,20 @@
 - pass classes and attributes to Modal, Content, & Trigger
 - [less than 1KB (minified+gzipped)](https://bundlephobia.com/package/sv-popup)
 
+## Props
+
+|   Prop   | Default | Feature                              |
+| :------: | :-----: | ------------------------------------ |
+| `basic`  | `false` | Adds a white background to the Modal |
+| `small`  | `false` | Pops a small modal                   |
+|  `big`   | `false` | Pops a big modal                     |
+| `button` | `true`  | Shows a close button                 |
+
 ## Demo
 
-A word in a paragraph can be a  <Modal basic><Content><h2>Hello</h2></Content><Trigger>modal</Trigger></Modal>
+A word in a paragraph can be a <Modal basic><Content><h2>Hello</h2></Content><Trigger>modal</Trigger></Modal>
 
-Click on the word ``modal`` to pop it.
+Click on the word `modal` to pop it.
 
 ```svelte
 A word in a paragraph can be a  <Modal basic><Content><h2>Hello</h2></Content><Trigger>modal</Trigger></Modal>
@@ -33,7 +42,7 @@ A word in a paragraph can be a  <Modal basic><Content><h2>Hello</h2></Content><T
     <h2>Hello world</h2>
   </Content>
   <Trigger>
-    <button>Open a simple unstyled modal</button>
+    <button class="btn">Open a simple unstyled modal</button>
   </Trigger>
 </Modal>
 <br />
@@ -45,7 +54,7 @@ A word in a paragraph can be a  <Modal basic><Content><h2>Hello</h2></Content><T
     <h2>Hello</h2>
   </Content>
   <Trigger>
-    <button>Open a simple unstyled modal</button>
+    <button class="btn">Open a simple unstyled modal</button>
   </Trigger>
 </Modal>
 ```
@@ -61,7 +70,7 @@ be explicitly added or use `basic` prop for a white background.
     <h2>Hello</h2>
   </Content>
   <Trigger>
-    <button>Open modal default (basic prop)</button>
+    <button class="btn">Open modal default (basic prop)</button>
   </Trigger>
 </Modal>
 <br />
@@ -73,7 +82,7 @@ be explicitly added or use `basic` prop for a white background.
     <h2>Hello</h2>
   </Content>
   <Trigger>
-    <button>Open modal default (basic prop)</button>
+    <button class="btn">Open modal default (basic prop)</button>
   </Trigger>
 </Modal>
 ```
@@ -85,7 +94,7 @@ be explicitly added or use `basic` prop for a white background.
     <h2>Hello world</h2>
   </Content>
   <Trigger>
-    <button>Open modal small</button>
+    <button class="btn">Open modal small</button>
   </Trigger>
 </Modal>
 <br />
@@ -97,7 +106,7 @@ be explicitly added or use `basic` prop for a white background.
     <h2>Hello world</h2>
   </Content>
   <Trigger>
-    <button>Open modal small</button>
+    <button class="btn">Open modal small</button>
   </Trigger>
 </Modal>
 ```
@@ -109,7 +118,7 @@ be explicitly added or use `basic` prop for a white background.
     <h2>Hello world</h2>
   </Content>
   <Trigger>
-    <button>Open modal with class p-4 (tailwind, bootstrap, or class based framework) on Content</button>
+    <button class="btn">Open modal with class p-4 (tailwind, bootstrap, or class based framework) on Content</button>
   </Trigger>
 </Modal>
 <br />
@@ -121,7 +130,7 @@ be explicitly added or use `basic` prop for a white background.
     <h2>Hello world</h2>
   </Content>
   <Trigger>
-    <button>Open modal with class p-4 (tailwind, bootstrap, or class based framework) on Content</button>
+    <button class="btn">Open modal with class p-4 (tailwind, bootstrap, or class based framework) on Content</button>
   </Trigger>
 </Modal>
 ```
@@ -133,7 +142,7 @@ be explicitly added or use `basic` prop for a white background.
     <h2>Hello</h2>
   </Content>
   <Trigger>
-    <button>Open modal with custom background</button>
+    <button class="btn">Open modal with custom background</button>
   </Trigger>
 </Modal>
 <br />
@@ -145,7 +154,7 @@ be explicitly added or use `basic` prop for a white background.
     <h2>Hello</h2>
   </Content>
   <Trigger>
-    <button>Open modal with custom background</button>
+    <button class="btn">Open modal with custom background</button>
   </Trigger>
 </Modal>
 ```
@@ -157,7 +166,7 @@ be explicitly added or use `basic` prop for a white background.
     <h2>Hello world</h2>
   </Content>
   <Trigger>
-    <button>Open modal big</button>
+    <button class="btn">Open modal big</button>
   </Trigger>
 </Modal>
 <br />
@@ -169,7 +178,7 @@ be explicitly added or use `basic` prop for a white background.
     <h2>Hello world</h2>
   </Content>
   <Trigger>
-    <button>Open modal big</button>
+    <button class="btn">Open modal big</button>
   </Trigger>
 </Modal>
 ```
@@ -188,7 +197,7 @@ be explicitly added or use `basic` prop for a white background.
     />
   </Content>
   <Trigger>
-    <button>Open video default</button>
+    <button class="btn">Open video default</button>
   </Trigger>
 </Modal>
 <br />
@@ -206,7 +215,7 @@ be explicitly added or use `basic` prop for a white background.
     />
   </Content>
   <Trigger>
-    <button>Open video default</button>
+    <button class="btn">Open video default</button>
   </Trigger>
 </Modal>
 ```
@@ -225,7 +234,7 @@ be explicitly added or use `basic` prop for a white background.
     />
   </Content>
   <Trigger>
-    <button>Open video + big layout + no close button</button>
+    <button class="btn">Open video + big layout + no close button</button>
   </Trigger>
 </Modal>
 <br />
@@ -243,7 +252,7 @@ be explicitly added or use `basic` prop for a white background.
     />
   </Content>
   <Trigger>
-    <button>Open video + big layout + no close button</button>
+    <button class="btn">Open video + big layout + no close button</button>
   </Trigger>
 </Modal>
 ```
