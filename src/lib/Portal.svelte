@@ -1,16 +1,11 @@
 <script>
   import { onMount } from "svelte";
-
   let ref;
-  let portal;
 
   onMount(() => {
-    portal = document.createElement("div");
-    portal.className = "portal";
-    document.body.appendChild(portal);
-    portal.appendChild(ref);
+    document.body.appendChild(ref);
     return () => {
-      document.body.removeChild(portal);
+      document.body.removeChild(ref);
     };
   });
 </script>

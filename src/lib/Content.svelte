@@ -38,6 +38,7 @@
     class={`modal__container ${modalClass ? modalClass : ""}`}
     class:hidden={modalId !== $id}
     {...rest}
+    role="dialog"
   >
     <div
       class={`modal__content ${className ? className : ""}`}
