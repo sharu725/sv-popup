@@ -10,14 +10,8 @@
   });
 </script>
 
-<div class="portal-clone">
+<template>
   <div bind:this={ref}>
     <slot />
   </div>
-</div>
-
-<style>
-  .portal-clone {
-    display: none;
-  }
-</style>
+</template>

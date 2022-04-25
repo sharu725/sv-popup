@@ -26,7 +26,7 @@
 
 ## Demo
 
-A word in a paragraph can be a <Modal basic><Content><h2>Hello</h2></Content><Trigger>modal</Trigger></Modal>
+A word in a paragraph can be a <Modal basic><Content><h2>Hello</h2></Content><Trigger><span class="underline">modal</span></Trigger></Modal>
 
 Click on the word `modal` to pop it.
 
@@ -292,6 +292,9 @@ be explicitly added or use `basic` prop for a white background.
   h1 {
     text-decoration: underline;
     text-decoration-style: dashed;
+  }
+  .underline {
+    text-decoration: underline;
   }
   iframe {
     width: 100%;

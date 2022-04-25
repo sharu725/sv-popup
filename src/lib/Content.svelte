@@ -43,9 +43,9 @@
     <div
       class={`modal__content ${className ? className : ""}`}
       class:modal__big={big}
+      class:modal__basic={basic}
       class:modal__small={small}
       {...$$restProps}
-      style:background-color={basic ? "white" : null}
     >
       {#if button}
         <div class="close__button" on:click={() => ($id = false)}>
@@ -100,20 +100,25 @@
   }
   .modal__content {
     position: relative;
-    margin: 100px auto;
     max-width: 800px;
     width: 80%;
-    display: grid;
-    place-items: center;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(-50%);
   }
   .modal__big {
     max-width: 100%;
-    padding: 0;
     margin: 3% auto;
+  }
+  .modal__basic {
+    background-color: white;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
   }
   .modal__small {
     max-width: 400px;
-    padding: 0;
   }
 
   .close__button {
