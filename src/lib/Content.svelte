@@ -84,7 +84,11 @@
   </div>
 </Portal>
 
-<svelte:window on:keydown={keyPressed} on:click={clicked} />
+<svelte:window
+  on:keydown={keyPressed}
+  on:click={clicked}
+  on:mousedown={clicked}
+/>
 
 <style>
   .modal__container {
