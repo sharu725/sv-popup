@@ -117,6 +117,11 @@ be explicitly added or use `basic` prop for a white background.
 <br />
 
 ```svelte
+<script>
+  let closeModal = false;
+  //set this to true by an event
+</script>
+
 <Modal basic close={closeModal}>
   <Content>
     <h2>Hello</h2>
