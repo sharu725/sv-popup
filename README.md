@@ -39,10 +39,4 @@ A simple popup/modal for svelte/sveltekit apps.
 </Modal>
 ```
 
-## Dependencies
-
-- depends on **svelte@3.47.0**
-- update svelte to `3.47` or higher in package.json
-- run `npm install`
-
 [Demo](https://sv-popup.sveltethemes.dev/)
