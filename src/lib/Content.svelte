@@ -6,6 +6,7 @@
   const modalId = getContext("modalId");
   const small = getContext("small");
   const big = getContext("big");
+  const fullscreen = getContext("fullscreen");
   const button = getContext("button");
   const basic = getContext("basic");
 
@@ -17,8 +18,8 @@
   let className = "";
   export { className as class };
 
-  const keyPressed = (event) => {
-    if (event.key === "Escape") {
+  const keyPressed = ({ key }) => {
+    if (key === "Escape") {
       $id = false;
     }
   };
@@ -42,6 +43,7 @@
   >
     <div
       class={`modal__content ${className ? className : ""}`}
+      class:modal__fullscreen={fullscreen}
       class:modal__big={big}
       class:modal__basic={basic}
       class:modal__small={small}
@@ -112,9 +114,18 @@
     margin: auto;
     transform: translateY(-50%);
   }
+  .modal__fullscreen {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    transform: translateY(0);
+  }
   .modal__big {
     max-width: 100%;
-    margin: 3% auto;
   }
   .modal__basic {
     background-color: white;

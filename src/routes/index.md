@@ -2,6 +2,15 @@
   import Modal from "$lib/Modal.svelte";
   import Trigger from "$lib/Trigger.svelte";
   import Content from "$lib/Content.svelte";
+
+  let closeModal;
+
+  const handleKeyPress = ({key}) => {
+    if(key === "c") {
+      closeModal = true
+    }
+  }
+
 </script>
 
 <h1>sv-popup</h1>
@@ -9,10 +18,10 @@
 
 ## Features
 
-- easy to use components
-- click outside or escape to close modal
-- uses portal
-- pass classes and attributes to Modal, Content, & Trigger
+- easy to use components.
+- **click outside** or **escape** to close modal.
+- uses portal.
+- pass classes and attributes to Modal, Content, & Trigger.
 - [less than 1KB (minified+gzipped)](https://bundlephobia.com/package/sv-popup)
 
 ## Props
@@ -23,6 +32,12 @@
 | `small`  | `false` | Pops a small modal                   |
 |  `big`   | `false` | Pops a big modal                     |
 | `button` | `true`  | Shows a close button                 |
+| `close`  | `false` | Set to true to close the modal       |
+
+## Limitations
+
+- though you can have multiple triggers on a page, only one modal can be opened at a time.
+- `close` closes all modals.
 
 ## Demo
 
@@ -89,6 +104,31 @@ be explicitly added or use `basic` prop for a white background.
 
 <br />
 <br />
+<Modal basic close={closeModal}>
+  <Content>
+    <h2>Hello</h2>
+    <p>Press "c" on the keyboard to close this Modal.</p>
+  </Content>
+  <Trigger>
+    <button class="btn" on:click={() => closeModal=false}>Open modal default + programmatically close</button>
+  </Trigger>
+</Modal>
+<br />
+<br />
+
+```svelte
+<Modal basic close={closeModal}>
+  <Content>
+    <h2>Hello</h2>
+  </Content>
+  <Trigger>
+    <button class="btn">Open modal default + external tigger to close</button>
+  </Trigger>
+</Modal>
+```
+
+<br />
+<br />
 <Modal basic small={true}>
   <Content>
     <h2>Hello world</h2>
@@ -138,7 +178,7 @@ be explicitly added or use `basic` prop for a white background.
 <br />
 <br />
 <Modal>
-  <Content class="bg-indigo-400">
+  <Content class="bg-indigo-400 p-4">
     <h2>Hello</h2>
   </Content>
   <Trigger>
@@ -150,7 +190,7 @@ be explicitly added or use `basic` prop for a white background.
 
 ```svelte
 <Modal>
-  <Content class="bg-indigo-400">
+  <Content class="bg-indigo-400 p-4">
     <h2>Hello</h2>
   </Content>
   <Trigger>
@@ -260,6 +300,42 @@ be explicitly added or use `basic` prop for a white background.
 <br />
 <br />
 
+<Modal fullscreen>
+  <Content>
+    <iframe
+      src="https://www.youtube.com/embed/7xDcmL5-ET8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
+  </Content>
+  <Trigger>
+    <button class="btn">Open video + fullscreen layout</button>
+  </Trigger>
+</Modal>
+<br />
+<br />
+
+```svelte
+<Modal fullscreen>
+  <Content>
+    <iframe
+      src="https://www.youtube.com/embed/7xDcmL5-ET8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
+  </Content>
+  <Trigger>
+    <button class="btn">Open video + fullscreen layout + no close button</button>
+  </Trigger>
+</Modal>
+```
+
+<br />
+<br />
 <p>An image as a trigger and content</p>
 <Modal big={true} button={false}>
   <Content>
@@ -286,7 +362,8 @@ be explicitly added or use `basic` prop for a white background.
 <br />
 <br />
 
-<a href="https://github.com/sharu725/sv-popup">Open an issue</a>
+<a href="https://github.com/sharu725/sv-popup">Contribute / Open an issue</a>
+<svelte:window on:keydown={handleKeyPress} />
 
 <style>
   h1 {
