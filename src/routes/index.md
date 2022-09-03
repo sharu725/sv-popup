@@ -344,7 +344,7 @@ be explicitly added or use `basic` prop for a white background.
 <p>An image as a trigger and content</p>
 <Modal big={true} button={false}>
   <Content>
-    <img src="https://picsum.photos/id/237/1000/600" alt="a dog" />
+    <img src="https://picsum.photos/id/237/1600/800" alt="a dog" />
   </Content>
   <Trigger>
     <img src="https://picsum.photos/id/237/300/200" alt="a dog" />
