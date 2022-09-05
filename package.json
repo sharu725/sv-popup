@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "package": "svelte-kit package",
+    "package": "svelte-package",
     "preview": "vite preview"
   },
   "devDependencies": {
