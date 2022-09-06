@@ -11,7 +11,7 @@ A simple popup/modal for svelte/sveltekit apps.
 
 ## Installation
 
-`npm i -D sv-popup`
+```npm i -D sv-popup```
 
 ## Usage
 
