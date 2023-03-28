@@ -50,7 +50,7 @@
       {...$$restProps}
     >
       {#if button}
-        <div class="close__button" on:click={() => ($id = false)}>
+        <button class="close__button" on:click={() => ($id = false)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -77,7 +77,7 @@
               /></g
             ></svg
           >
-        </div>
+        </button>
       {/if}
       {#if modalId == $id}
         <slot />
@@ -138,6 +138,8 @@
 
   .close__button {
     position: absolute;
+    background: none;
+    border: none;
     top: -0.75rem;
     right: -0.75rem;
     color: rgb(233, 71, 71);
