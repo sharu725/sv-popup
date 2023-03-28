@@ -7,17 +7,20 @@
     "package": "svelte-package",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "svelte": "^3.57.0"
+  },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
-    "svelte": "^3.47.0",
-    "svelte2tsx": "^0.5.8",
-    "mdsvex": "^0.10.5"
+    "@sveltejs/package": "^2.0.2",
+    "mdsvex": "^0.10.5",
+    "svelte2tsx": "^0.5.8"
   },
   "type": "module",
-  "svelte": "index.js",
+  "svelte": "./dist/index.js",
   "exports": {
-    ".": "./index.js"
+    ".": "./dist/index.js"
   },
   "repository": {
     "type": "git",
