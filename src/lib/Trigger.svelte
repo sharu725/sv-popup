@@ -9,7 +9,7 @@
   };
 </script>
 
-<span class={className ? className : ""} on:click={openModal} {...$$restProps}>
+<span role="button" class={className ? className : ""} on:click={openModal} {...$$restProps}>
   <slot />
 </span>
 
