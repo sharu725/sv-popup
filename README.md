@@ -31,7 +31,7 @@ npm i -D sv-popup
   </Trigger>
 </Modal>
 
-<Modal>
+<Modal basic>
   <Content>
     <h1>Hello 2</h1>
   </Content>
