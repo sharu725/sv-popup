@@ -21,6 +21,12 @@
 
 An easy to use popup/modal utility for svelte.
 
+## Installation
+
+```
+npm i -D sv-popup
+```
+
 ## Features
 
 - easy to use components.
@@ -31,14 +37,14 @@ An easy to use popup/modal utility for svelte.
 
 ## Props
 
-|     Prop     | Default | Feature                              |
-| :----------: | :-----: | ------------------------------------ |
+|     Prop     | Default | Feature                            |
+| :----------: | :-----: | ---------------------------------- |
 |   `basic`    | `false` | Adds white background to the Modal |
 |   `small`    | `false` | Pops small modal                   |
 |    `big`     | `false` | Pops big modal                     |
 | `fullscreen` | `false` | Pops fullscreen modal              |
 |   `button`   | `true`  | Shows close button                 |
-|   `close`    | `false` | Set to true to close the modal       |
+|   `close`    | `false` | Set to true to close the modal     |
 
 ## Limitations
 
