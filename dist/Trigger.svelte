@@ -9,7 +9,14 @@
   };
 </script>
 
-<span class={className ? className : ""} on:click={openModal} {...$$restProps}>
+<span
+  role="button"
+  aria-pressed="false"
+  class={className ? className : ""}
+  on:click={openModal}
+  {...$$restProps}
+  tabindex="0"
+>
   <slot />
 </span>
 
