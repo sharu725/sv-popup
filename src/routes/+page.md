@@ -65,14 +65,17 @@ npm i -D sv-popup
 <Fullscreen />
 <ImageTrigger />
 <br/>
-<a href="https://github.com/sharu725/sv-popup">Contribute / Open an issue</a>
+<div>
+  <a target="_blank" href="https://github.com/sharu725/sv-popup">github</a>
+  <span>&nbsp;</span>
+  <a target="_blank" href="https://www.npmjs.com/package/sv-popup">npm</a>
+</div>
 
 <style>
   h1 {
     text-decoration: underline;
     text-decoration-style: dashed;
   }
-
   li {
     margin-bottom: 0.5rem;
   }

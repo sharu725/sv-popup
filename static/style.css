@@ -8,6 +8,23 @@ body {
   font-family: var(--font-body);
 }
 
+h1 {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+.bg-indigo-400 {
+  background-color: #6569db;
+}
+
 h2:not(.modal__content h2) {
   margin-top: 3rem;
 }
