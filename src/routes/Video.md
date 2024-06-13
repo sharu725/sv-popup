@@ -39,6 +39,7 @@
   </Trigger>
 </Modal>
 
+<!-- required styles -->
 <style>
   iframe {
   width: 100%;

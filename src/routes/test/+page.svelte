@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
   import { Modal, Content, Trigger } from "sv-popup"
 </script>
 
@@ -18,4 +18,4 @@
   <Trigger>
     <button>Open Modal 2</button>
   </Trigger>
-</Modal>
+</Modal> -->

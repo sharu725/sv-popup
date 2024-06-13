@@ -1,7 +1,7 @@
 /** @typedef {typeof __propDef.props}  ContentProps */
 /** @typedef {typeof __propDef.events}  ContentEvents */
 /** @typedef {typeof __propDef.slots}  ContentSlots */
-export default class Content extends SvelteComponentTyped<{
+export default class Content extends SvelteComponent<{
     [x: string]: any;
     class?: string;
 }, {
@@ -13,7 +13,7 @@ export default class Content extends SvelteComponentTyped<{
 export type ContentProps = typeof __propDef.props;
 export type ContentEvents = typeof __propDef.events;
 export type ContentSlots = typeof __propDef.slots;
-import { SvelteComponentTyped } from "svelte";
+import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
@@ -25,5 +25,7 @@ declare const __propDef: {
     slots: {
         default: {};
     };
+    exports?: {};
+    bindings?: string;
 };
 export {};

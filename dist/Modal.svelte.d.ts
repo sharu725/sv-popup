@@ -1,7 +1,7 @@
 /** @typedef {typeof __propDef.props}  ModalProps */
 /** @typedef {typeof __propDef.events}  ModalEvents */
 /** @typedef {typeof __propDef.slots}  ModalSlots */
-export default class Modal extends SvelteComponentTyped<{
+export default class Modal extends SvelteComponent<{
     [x: string]: any;
     small?: boolean;
     big?: boolean;
@@ -18,7 +18,7 @@ export default class Modal extends SvelteComponentTyped<{
 export type ModalProps = typeof __propDef.props;
 export type ModalEvents = typeof __propDef.events;
 export type ModalSlots = typeof __propDef.slots;
-import { SvelteComponentTyped } from "svelte";
+import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
@@ -35,5 +35,7 @@ declare const __propDef: {
     slots: {
         default: {};
     };
+    exports?: {};
+    bindings?: string;
 };
 export {};

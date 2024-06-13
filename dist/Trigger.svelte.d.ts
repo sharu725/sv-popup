@@ -1,7 +1,7 @@
 /** @typedef {typeof __propDef.props}  TriggerProps */
 /** @typedef {typeof __propDef.events}  TriggerEvents */
 /** @typedef {typeof __propDef.slots}  TriggerSlots */
-export default class Trigger extends SvelteComponentTyped<{
+export default class Trigger extends SvelteComponent<{
     [x: string]: any;
     class?: string;
 }, {
@@ -13,7 +13,7 @@ export default class Trigger extends SvelteComponentTyped<{
 export type TriggerProps = typeof __propDef.props;
 export type TriggerEvents = typeof __propDef.events;
 export type TriggerSlots = typeof __propDef.slots;
-import { SvelteComponentTyped } from "svelte";
+import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
@@ -25,5 +25,7 @@ declare const __propDef: {
     slots: {
         default: {};
     };
+    exports?: {};
+    bindings?: string;
 };
 export {};
